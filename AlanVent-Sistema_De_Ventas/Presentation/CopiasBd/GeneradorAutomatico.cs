@@ -1,0 +1,170 @@
+﻿using AlanVent_Sistema_De_Ventas.DataAccess;
+using AlanVent_Sistema_De_Ventas.Logic;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AlanVent_Sistema_De_Ventas.Presentation.CopiasBd
+{
+    public partial class GeneradorAutomatico : Form
+    {
+        public GeneradorAutomatico()
+        {
+            InitializeComponent();
+        }
+        int contador = 10;
+        string txtsoftware = "AlanVent";
+        string Base_De_datos = "AlanVent_SistemaDeVentas";
+        private Thread Hilo;
+        private bool acaba = false;
+        string lblfrecuencia;
+        private void GeneradorAutomatico_Load(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            Mostrar_empresa();
+            timerContador.Start();
+        }
+        private void Mostrar_empresa()
+        {
+            DataTable dt = new DataTable();
+            Obtener_datos.mostrar_EMPRESA(ref dt);
+            foreach (DataRow row in dt.Rows)
+            {
+                txtRuta.Text = row["Carpeta_para_copias_de_seguridad"].ToString();
+                lblfrecuencia = row["Frecuencia_de_copia"].ToString();
+
+            }
+        }
+
+        private void timerContador_Tick(object sender, EventArgs e)
+        {
+            contador -= 1;
+            lbltiempo.Text = contador.ToString();
+            if (contador == 0)
+            {
+                contador = 0;
+                timerContador.Stop();
+                GenerarCopia();
+
+            }
+        }
+        private void GenerarCopia()
+        {
+            if (!string.IsNullOrEmpty(txtRuta.Text))
+            {
+                Hilo = new Thread(new ThreadStart(ejecucion));
+                Pcargando.Visible = true;
+                Hilo.Start();
+                acaba = false;
+                timer1.Start();
+
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una Ruta donde Guardar las Copias de Seguridad", "Seleccione Ruta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtRuta.Focus();
+
+            }
+        }
+        private void ejecucion()
+        {
+            try
+            {
+                string miCarpeta = "Copias_de_Seguridad_de_" + txtsoftware;
+                if (System.IO.Directory.Exists(txtRuta.Text + miCarpeta))
+                {
+
+                }
+                else
+                {
+                    System.IO.Directory.CreateDirectory(txtRuta.Text + miCarpeta);
+                }
+                string ruta_completa = txtRuta.Text + miCarpeta;
+                string SubCarpeta = ruta_completa + @"\Respaldo_al_" + DateTime.Now.Day + "_" + (DateTime.Now.Month) + "_" + DateTime.Now.Year + "_" + DateTime.Now.Hour + "_" + DateTime.Now.Minute;
+                try
+                {
+                    System.IO.Directory.CreateDirectory(System.IO.Path.Combine(ruta_completa, SubCarpeta));
+
+                }
+                catch (Exception)
+                {
+
+
+                }
+                try
+                {
+                    string v_nombre_respaldo = Base_De_datos + ".bak";
+                    ConexionMaestra.abrir();
+                    SqlCommand cmd = new SqlCommand("BACKUP DATABASE " + Base_De_datos + " TO DISK = '" + SubCarpeta + @"\" + v_nombre_respaldo + "'", ConexionMaestra.conectar);
+                    cmd.ExecuteNonQuery();
+                    acaba = true;
+                    ConexionMaestra.cerrar();
+                }
+                catch (Exception ex)
+                {
+                    acaba = false;
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            catch (System.IO.DirectoryNotFoundException)
+            {
+                MessageBox.Show("La ruta a guardar tu respaldo no esta disponible, verifica el funcionamiento correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Exit();
+                Application.ExitThread();
+                Dispose();
+            }
+            
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            Application.ExitThread();
+            Dispose();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (acaba == true)
+            {
+                timer1.Stop();
+                Pcargando.Visible = false;
+                editarRespaldos();
+
+            }
+        }
+        private void editarRespaldos()
+        {
+            Lempresa parametros = new Lempresa();
+            Editar_datos funcion = new Editar_datos();
+            parametros.Carpeta_para_copias_de_seguridad = txtRuta.Text;
+            parametros.Ultima_fecha_de_copia_de_seguridad = DateTime.Now.ToString();
+            parametros.Ultima_fecha_de_copia_date = DateTime.Now;
+            parametros.Frecuencia_de_copias = Convert.ToInt32(lblfrecuencia);
+            if (funcion.editarRespaldos(parametros) == true)
+            {
+                Application.Exit();
+                Application.ExitThread();
+                Dispose();
+            }
+        }
+
+        private void ToolStripButton22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pcargando_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

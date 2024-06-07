@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\App.config" />
+  <event action="Analyze" type="Success" name="CierreDeCaja.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Caja\CierreDeCaja.resx" />
+  <event action="Analyze" type="Success" name="frm_Apertura_de_caja.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Caja\frm_Apertura_de_caja.resx" />
+  <event action="Analyze" type="Success" name="frm_guardardelmenu.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Guardar_Del_Menu\frm_guardardelmenu.resx" />
+  <event action="Analyze" type="Success" name="frmInicioSeccion.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\InicioSeccion\frmInicioSeccion.resx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\InicioSeccion\HTMLPage1.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\InicioSeccion\HTMLPage1.html" />
+  <event action="Analyze" type="Success" name="HTMLPage1.html" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\InicioSeccion\HTMLPage1.html" />
+  <event action="Analyze" type="Success" name="Inventarios_menu.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Inventarios_Kardex\Inventarios_menu.resx" />
+  <event action="Analyze" type="Success" name="ConexionManual.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Panel_Conexion_Del_Software\ConexionManual.resx" />
+  <event action="Analyze" type="Success" name="frm_Productos.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Productos\frm_Productos.resx" />
+  <event action="Analyze" type="Success" name="Form1.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Reportes\Reportes_de_kardex\PRUEBA\Form1.resx" />
+  <event action="Analyze" type="Success" name="FormInventariosTodos.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Reportes\Reportes_de_kardex\Reporte_de_inventarios\FormInventariosTodos.resx" />
+  <event action="Analyze" type="Success" name="Reporte_inventarios_todos.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Reportes\Reportes_de_kardex\Reporte_de_inventarios\Reporte_inventarios_todos.resx" />
+  <event action="Analyze" type="Success" name="frmUsuarios.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Usuarios Y Permisos\frmUsuarios.resx" />
+  <event action="Analyze" type="Success" name="frm_VENTAS_MENU_PRINCIPAL.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Presentation\Ventas_Menu_Principal\frm_VENTAS_MENU_PRINCIPAL.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="AlanVent-Sistema_De_Ventas" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas.csproj" />
+  <event action="Analyze" type="Success" name="AlanVent-Sistema_De_Ventas" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas.sln" />
+  <event action="Backup" type="Success" name="AlanVent-Sistema_De_Ventas" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas.csproj" />
+  <event action="Upgrade" type="Success" name="AlanVent-Sistema_De_Ventas" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas.csproj" />
+  <event action="Upgrade" type="Success" name="AlanVent-Sistema_De_Ventas" path="C:\Users\johnk\Desktop\ProgramCShar\AlanVent-Sistema_De_Ventas\AlanVent-Sistema_De_Ventas.sln" />
+</log>
